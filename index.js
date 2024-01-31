@@ -9,14 +9,14 @@ keepAlive();
 
 const statuses = [
   {
-    type: 'WATCHING', // LISTENING, PLAYING, STREAMING, WATCHING
-    name: 'zensware',
-    details: 'zensware',
+    type: 'STREAMING', // LISTENING, PLAYING, STREAMING, WATCHING
+    name: 'Solly',
+    details: 'a normal person',
     state: null,
-    largeImage: 'Image-Address',
+    largeImage: 'https://media.discordapp.net/attachments/1116694463658598412/1201399281018482799/black-clover-black-clover-movie.gif?',
     largeText: null,
-    smallImage: 'Image-Address',
-    smallText: 'Verified Application',
+    smallImage: null,
+    smallText: null,
     url: 'https://twitch.tv/zensware',
     buttons: [
       {
@@ -30,14 +30,14 @@ const statuses = [
     ]
   },
   {
-    type: 'WATCHING', // LISTENING, PLAYING, STREAMING, WATCHING
-    name: 'zensware',
-    details: 'zensware',
+    type: 'STREAMING', // LISTENING, PLAYING, STREAMING, WATCHING
+    name: 'Solly',
+    details: 'a normal person',
     state: null,
-    largeImage: 'Image-Address',
+    largeImage: 'https://media.discordapp.net/attachments/1116694463658598412/1201399307279015936/mob-psycho100-mob-psycho.gif?',
     largeText: null,
-    smallImage: 'Image-Address',
-    smallText: 'Verified Application',
+    smallImage: null,
+    smallText: null,
     url: 'https://twitch.tv/zensware',
     buttons: [
       {
@@ -51,14 +51,14 @@ const statuses = [
     ]
   },
   {
-    type: 'WATCHING', // LISTENING, PLAYING, STREAMING, WATCHING
-    name: 'zensware',
-    details: 'zensware',
+    type: 'STREAMING', // LISTENING, PLAYING, STREAMING, WATCHING
+    name: 'Solly',
+    details: 'a normal person',
     state: null,
-    largeImage: 'Image-Address',
+    largeImage: 'https://media.discordapp.net/attachments/1116694463658598412/1201399329890521138/gojo-six-eyes.gif?',
     largeText: null,
-    smallImage: 'Image-Address',
-    smallText: 'Verified Application',
+    smallImage: null,
+    smallText: null,
     url: 'https://twitch.tv/zensware',
     buttons: [
       {
@@ -84,7 +84,7 @@ client.on('ready', async () => {
     const currentStatus = statuses[statusIndex];
 
     const r = new Discord.RichPresence()
-      .setApplicationId('Application-ID') // Get your application id @ https://discord.com/developers/applications
+      .setApplicationId('1116621382466412614') // Get your application id @ https://discord.com/developers/applications
       .setType(currentStatus.type)
       .setURL(currentStatus.url)
       .setName(currentStatus.name)
@@ -108,7 +108,7 @@ client.on('ready', async () => {
   updatePresenceAndActivity();
   setInterval(updatePresenceAndActivity, 2500);
 
-  client.user.setPresence({ status: 'online' });
+  client.user.setPresence({ status: 'idle' });
 });
 
 client.login(process.env.TOKEN);
